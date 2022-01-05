@@ -13,10 +13,5 @@ function bootstrap() {
   .catch(err => console.error(err));
 };
 
-
-if (document.readyState === 'complete') {
-  bootstrap();
-} else {
-  document.addEventListener('DOMContentLoaded', bootstrap);
-}
-
+// @ts-ignore
+window.bootstrap = bootstrap;
